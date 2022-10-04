@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    {/* <Header name={this.state.name} /> */}
+      <Header />
+      <Main />
+      <Footer />
+    </React.Fragment>
   );
+}
+
+function Header() {
+  return (
+    <header>
+      <h1></h1>
+    </header>
+  )
+}
+
+function Main() {
+  return (
+    <main>
+      <p>Important stuff goes here..</p>
+    </main>
+  )
+}
+
+function Footer() {
+  return (
+    <footer>
+      <p>Made with React - 1 Hacker Way Menlo Park, CA 94025</p>
+    </footer>
+  )
 }
 
 export default App;
