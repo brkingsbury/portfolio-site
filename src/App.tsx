@@ -4,9 +4,11 @@ import './App.scss';
 function App() {
   return (
     <React.Fragment>
-    {/* <Header name={this.state.name} /> */}
+      {/* <Header name={this.state.name} /> */}
       <Header />
-      <Main />
+      <Nav />
+      <Main title="Work" />
+      <Options />
       <Footer />
     </React.Fragment>
   );
@@ -15,23 +17,51 @@ function App() {
 function Header() {
   return (
     <header>
-      <h1></h1>
+      <h1>Brian<br />Kingsbury</h1>
+      <p>UX Developer</p>
     </header>
   )
 }
 
-function Main() {
+function Card(props: any) {
+  return (
+    <div className="card">
+      <p>{props.txt}</p>
+    </div>
+  )
+}
+
+function Nav() {
+  return (
+    <nav>
+      <a>About</a>
+      <a>Work</a>
+      <a>Resume</a>
+    </nav>
+  )
+}
+
+function Main(props:any) {
   return (
     <main>
-      <p>Important stuff goes here..</p>
+      <h2>{props.title}</h2>
+      <Card txt="Hello there" />
+      <Card txt="No there" />
+      <Card txt="There be" />
     </main>
+  )
+}
+
+function Options() {
+  return (
+    <div className="options">
+    </div>
   )
 }
 
 function Footer() {
   return (
     <footer>
-      <p>Made with React - 1 Hacker Way Menlo Park, CA 94025</p>
     </footer>
   )
 }
