@@ -1,68 +1,42 @@
 import React from 'react';
 import './App.scss';
+import {
+  Route,
+  Routes,
+  BrowserRouter,
+  useLocation
+} from "react-router-dom";
+import Work from './pages/work';
+import About from './pages/about';
+import Nav from './components/nav';
+import Header from './components/header';
+import Footer from './components/footer';
 
 function App() {
+  // let location = useLocation();
   return (
     <React.Fragment>
-      {/* <Header name={this.state.name} /> */}
       <Header />
-      <Nav />
-      <Main title="Work" />
+      <BrowserRouter>
+        <Nav />
+        <main>
+          <Routes>
+          <h2>Title</h2>
+            <Route path="about" element={<About />} />
+            <Route path="work" element={<Work />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
       <Options />
       <Footer />
     </React.Fragment>
   );
 }
 
-function Header() {
-  return (
-    <header>
-      <h1>Brian<br />Kingsbury</h1>
-      <p>UX Developer</p>
-    </header>
-  )
-}
-
-function Card(props: any) {
-  return (
-    <div className="card">
-      <p>{props.txt}</p>
-    </div>
-  )
-}
-
-function Nav() {
-  return (
-    <nav>
-      <a>About</a>
-      <a>Work</a>
-      <a>Resume</a>
-    </nav>
-  )
-}
-
-function Main(props:any) {
-  return (
-    <main>
-      <h2>{props.title}</h2>
-      <Card txt="Hello there" />
-      <Card txt="No there" />
-      <Card txt="There be" />
-    </main>
-  )
-}
-
 function Options() {
   return (
     <div className="options">
     </div>
-  )
-}
-
-function Footer() {
-  return (
-    <footer>
-    </footer>
   )
 }
 
