@@ -1,16 +1,44 @@
+@import '../index.scss';
+
 nav {
     grid-area: 2 / 1 / 3 / 2;
 
     a {
+        position: relative;
         display: block;
-        color: black;
         margin-bottom: .5em;
         font-size: 1.1em;
         width: fit-content;
 
+        &.subnav {
+            margin-left: 1em;
+            font-size: 1em;
+
+            &:before {
+                content: "";
+
+            }
+        }
+
+        &:after {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.0);
+            height: 0;
+            width: calc(100% + 10px);
+            bottom: 0;
+            left: -5px;
+            transition: all 200ms ease-in;
+            z-index: 10;
+            backdrop-filter: invert(100%);
+        }
+
         &:hover {
-            outline: 2px solid black;
-            outline-offset: 2px;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 2px;
+                height: 1em;
+            }
         }
 
         &.active {
@@ -27,7 +55,7 @@ nav {
 }
 
 .card-container {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 
     h3 {
         font-size: 1.75em;
@@ -37,27 +65,48 @@ nav {
 
     .card-details {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: fit-content fit-content;
-        margin-top: .25em;
+        margin-top: .5em;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
 
-        .description {
+        p {
             margin: 0;
         }
 
         a {
-            text-align: right;
-        }
+            img {
+                height: 1em;
+                width: 1em;
+                margin-left: 5px;
+                vertical-align: text-top;
+            }
 
-        .built {
-            font-style: italic;
+            &.url {
+                text-align: center;
+            }
+
+            &.git {
+                text-align: right;
+            }
         }
     }
 }
 
 .card {
-    border: 2px solid black;
-    box-shadow: 2px 2px 0 0 black;
+    background-color: var(--card-bg);
+    padding: 5px;
+    border: 2px solid var(--line-color);
+    box-shadow: 2px 2px 0 0 var(--shadow);
+    min-height: 150px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+    & ~ .card {
+        margin-top: 2em;
+    }
 }
 
 header {
@@ -84,7 +133,7 @@ header {
         left: 100%;
         top: 20px;
         font-size: 1.1em;
-        transition: opacity 600ms ease-in;
+        transition: opacity 600ms ease-out 500ms;
 
         p {
             white-space: nowrap;
@@ -103,5 +152,8 @@ header {
 
 footer {
     grid-area: 3 / 1 / 4 / 4;
-    border: 1px solid black;
+}
+
+.project-description {
+    display: block;
 }

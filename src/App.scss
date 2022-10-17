@@ -1,9 +1,24 @@
-#root {
+
+@mixin button-styles {
+    background-color: var(--btn-bg);
+    border: 1px solid var(--line-color);
+    font-family: var(--font);
+    font-size: 1em;
+    &:hover, &:focus {
+        background-color: var(--btn-bg-hover);
+    }
+}
+
+#wrapper {
     display: grid;
     grid-template-columns: max-content 1fr 10vw;
     grid-template-rows: max-content 1fr max-content;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap:2em;
+    grid-row-gap: 2em;
+    background-color: var(--bg-color);
+    padding: 0 0 0 0.75em;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 h1,
@@ -12,12 +27,14 @@ h3,
 p,
 a {
     font-family: 'Work Sans', sans-serif;
+    color: var(--text-color);
 }
 
 h2 {
     margin: 0 0 1em 0;
     font-size: 2em;
     text-transform: capitalize;
+    line-height: 1;
 }
 nav {
     grid-area: 2 / 1 / 3 / 2;
@@ -28,11 +45,18 @@ header {
 
 main {
     grid-area: 2 / 2 / 3 / 3;
-    padding: 0 1em;
     max-width: 1000px;
 }
 
 .options {
     grid-area: 2 / 3 / 3 / 4;
-    background-color: #eee;
+    text-align: right;
+    position: relative;
+    button {
+        @include button-styles;
+        padding: 5px 10px;
+        position: absolute;
+        right: -1px;
+
+    }
 }

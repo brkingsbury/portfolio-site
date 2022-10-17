@@ -5,7 +5,8 @@ export default function Nav() {
         <nav>
             <NavLink to={'about'}>About</NavLink>
             <NavLink to={'work'}>Work</NavLink>
-            <a href="">Something</a>
+            <NavLink to={'rivet'} className="subnav">Rivet</NavLink>
+            <NavLink to={'cultivate'} className="subnav">CYM</NavLink>
         </nav>
     )
 }
