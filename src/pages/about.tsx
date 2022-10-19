@@ -2,12 +2,8 @@
 export default function About() {
     return (
         <section>
-            <p>Well I don't really like talking about myself.</p>
-            <hr/>
-            <div className="current">
-                <p>Currently learning: React</p>
-                <p>Currently reading: Technically Wrong - Sara Wachter-Boettcher</p>
-            </div>
+            <p>Hey! I'm Brian. I am a user experience developer based out of Milwaukee, WI. My career has been a healthy balance of both design and development, but I prefer to work with code.</p>
+            <p>Outside of coding, I enjoy woodworking, travelling, and spending time with family.</p>
         </section>
     )
 }

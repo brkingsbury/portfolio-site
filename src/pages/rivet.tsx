@@ -1,3 +1,4 @@
+import './pageStyles.scss';
 import { Card } from '../components/card';
 import rivet1 from '../assets/rivet.png';
 import rivet2 from '../assets/rivet-2.png';
@@ -11,13 +12,14 @@ export default function Rivet() {
     return (
         <section>
             <p>Rivet is an internal design system and component library built for both designers and developers.</p>
-            <p className="project-description">
-                HTML | SCSS | Angular/Typescript
-                <br/>
-                <img src={github}/>Github&nbsp;
-                <a href="">Documentation site</a> /&nbsp;
-                <a href="">NPM style package</a>
-            </p>
+            <ul className="project-details">
+                <li>HTML | SCSS | Angular / Typescript</li>
+                <li>
+                    <img src={github} />&nbsp;
+                    <a href="">Documentation site</a> /&nbsp;
+                    <a href="">NPM style package</a>
+                </li>
+            </ul>
             <Card img={rivet1} />
             <Card img={rivet2} />
             <Card img={rivet3} />

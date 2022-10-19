@@ -6,17 +6,17 @@ export default function Work() {
     return (
         <section>
             <CardContainer
-                header="Rivet - Design System + Component Library"
+                header="Rivet"
                 img={rivet}
-                url=""
-                built="HTML | SCSS | Angular/Typescript"
+                description="A documentation site and component library for an internal design system"
+                link="../rivet"
             />
 
             <CardContainer
-                header="Cultivate Yoga MKE - Website"
+                header="Cultivate Yoga MKE"
                 img={cym}
-                url="https://www.cultivateyogamke.com"
-                built="HTML | SCSS | Angular/Typescript"
+                description="Website and branding for yoga classes"
+                link="../cym"
             />
         </section>
     )

@@ -11,12 +11,20 @@ nav {
         width: fit-content;
 
         &.subnav {
-            margin-left: 1em;
+            margin-left: 1.2em;
             font-size: 1em;
 
             &:before {
                 content: "";
-
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                left: -1.3em;
+                bottom: 1px;
+            }
+            &.active:before {
+                    background-image: url("../assets/icons/corner-down-right.svg");
             }
         }
 
@@ -24,9 +32,9 @@ nav {
             content: "";
             background-color: rgba(0, 0, 0, 0.0);
             height: 0;
-            width: calc(100% + 10px);
-            bottom: 0;
-            left: -5px;
+            width: calc(100% + 4px);
+            top: -2px;
+            left: -2px;
             transition: all 200ms ease-in;
             z-index: 10;
             backdrop-filter: invert(100%);
@@ -36,20 +44,17 @@ nav {
             &:after {
                 content: "";
                 position: absolute;
-                bottom: 2px;
-                height: 1em;
+                height: calc(100% + 4px);
+                transition-delay: 400ms;
             }
+            outline: 1px solid var(--line-color);
+            outline-offset: 2px;
         }
 
         &.active {
             font-weight: 700;
 
-            &:after {
-                position: absolute;
-                content: "";
-                right: 0;
-                display: block;
-            }
+            
         }
     }
 }
@@ -64,31 +69,7 @@ nav {
     }
 
     .card-details {
-        display: grid;
         margin-top: .5em;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-
-        p {
-            margin: 0;
-        }
-
-        a {
-            img {
-                height: 1em;
-                width: 1em;
-                margin-left: 5px;
-                vertical-align: text-top;
-            }
-
-            &.url {
-                text-align: center;
-            }
-
-            &.git {
-                text-align: right;
-            }
-        }
     }
 }
 
@@ -152,8 +133,4 @@ header {
 
 footer {
     grid-area: 3 / 1 / 4 / 4;
-}
-
-.project-description {
-    display: block;
 }

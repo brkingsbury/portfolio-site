@@ -25,6 +25,9 @@ function App() {
     setTheme(newTheme);
   }
   let location = (useLocation().pathname).substring(1);
+  if (location === 'cym') {
+    location = 'Cultivate Yoga MKE'
+  }
   return (
     <React.Fragment>
       <div id="wrapper" data-theme={theme}>
@@ -37,13 +40,13 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="work" element={<Work />} />
             <Route path="rivet" element={<Rivet />} />
-            <Route path="cultivate" element={<Cym />} />
+            <Route path="cym" element={<Cym />} />
           </Routes>
         </main>
         {/* <Options /> */}
-        <div className="options">
+        {/* <div className="options">
           <button onClick={switchTheme}>{theme}</button>
-        </div>
+        </div> */}
         <Footer />
       </div>
     </React.Fragment>

@@ -1,0 +1,13 @@
+.project-details {
+    list-style-type: none;
+    font-family: var(--font);
+    padding: 0;
+    li {
+        margin-bottom: .6em;
+    }
+    img {
+        height: 1em;
+        width: 1em;
+        vertical-align: text-top;
+    }
+}
