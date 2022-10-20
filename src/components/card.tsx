@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom";
 import './componentStyles.scss';
-import external from '../assets/icons/external-link.svg';
-import github from '../assets/icons/github.svg';
 
 function CardContainer(props: any) {
   return (

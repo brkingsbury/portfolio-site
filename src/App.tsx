@@ -14,6 +14,7 @@ import Options from './components/options';
 import useLocalStorage from 'use-local-storage';
 import Rivet from './pages/rivet';
 import Cym from './pages/cym';
+import Resume from './pages/resume';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path="work" element={<Work />} />
             <Route path="rivet" element={<Rivet />} />
             <Route path="cym" element={<Cym />} />
+            <Route path="resume" element={<Resume />} />
           </Routes>
         </main>
         {/* <Options /> */}

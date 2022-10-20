@@ -7,7 +7,7 @@ export default function Nav() {
             <NavLink to={'work'}>Work</NavLink>
             <NavLink to={'rivet'} className="subnav">Rivet</NavLink>
             <NavLink to={'cym'} className="subnav">CYM</NavLink>
-            <a>Resume</a>
+            <NavLink to={'resume'}>Resume</NavLink>
         </nav>
     )
 }
