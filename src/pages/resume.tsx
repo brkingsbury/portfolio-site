@@ -22,7 +22,7 @@ export default function resume() {
                     <p>February 2020 - March 2021</p>
                 </div>
                 <ul className="duties">
-                    <li>Design and development owner of internal design styem and component library</li>
+                    <li>Design and development owner of internal design system and component library</li>
                     <ul className="sublist">
                         <li>Added to and maintained Sketch library of design system</li>
                         <li>Added/Edited code in component library (HTML, SCSS, Angular)</li>
@@ -33,7 +33,7 @@ export default function resume() {
                     <ul className="sublist">
                         <li>Performed accessibility audits on all products</li>
                         <li>Created a roadmap for how to gradually improve compliance over time</li>
-                        <li>Logged improvements for designers and developers, and provided accessiblity design reviews and code reviews</li>
+                        <li>Logged improvements for designers and developers, and provided accessibility design reviews and code reviews</li>
                     </ul>
                 </ul>
                 <h4>UX Developer / Associate UX Developer</h4>
