@@ -11,7 +11,7 @@ import github from '../assets/icons/github.svg';
 export default function Rivet() {
     return (
         <section>
-            <p>Rivet is an internal design system and component library built for both designers and developers.</p>
+            <p>Rivet is an internal design system and component library built for both designers and developers. It consists of two parts, one being an NPM package containing all the components and styles for developers to import into their projects, and the other part being the documentation site. The documentation site showcased the components and styles, explained best practices and use cases, and provided examples with implementation standards.</p>
             <ul className="project-details">
                 <li>HTML | SCSS | Angular / Typescript</li>
                 <li>

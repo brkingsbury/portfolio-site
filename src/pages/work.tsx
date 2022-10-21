@@ -18,6 +18,10 @@ export default function Work() {
                 description="Website and branding for yoga classes"
                 link="../cym"
             />
+            <CardContainer
+            header="This Site"
+            description="Building out this site to learn React and experiment with the latest in CSS. Next up: more React, colors/themes, mobile version, latest CSS improvements, and more."
+            />
         </section>
     )
 }
