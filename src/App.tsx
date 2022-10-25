@@ -10,7 +10,6 @@ import About from './pages/about';
 import Nav from './components/nav';
 import Header from './components/header';
 import Footer from './components/footer';
-import Options from './components/options';
 import useLocalStorage from 'use-local-storage';
 import Rivet from './pages/rivet';
 import Cym from './pages/cym';
@@ -21,10 +20,10 @@ function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
-  const switchTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-  }
+  // const switchTheme = () => {
+  //   const newTheme = theme === 'light' ? 'dark' : 'light';
+  //   setTheme(newTheme);
+  // }
   let location = (useLocation().pathname).substring(1);
   if (location === 'cym') {
     location = 'Cultivate Yoga MKE'
