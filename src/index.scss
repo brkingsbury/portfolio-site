@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap');
 
-:root, [data-theme='light'] {
-  --font: 'Work Sans', sans-serif;
-  --text-color: black;
-  --bg-color: white;
-  --line-color: black;
-  --btn-bg: white;
+:root {
+--font: 'Work Sans', sans-serif;
+--content-color: black;
+--bg-color: white;
+--text-color: var(--content-color);
+--line-color: var(--content-color);
+--btn-bg: var(--bg-color);
+}
+
+[data-theme='light'] {
   --btn-bg-hover: black;
 }
 
 [data-theme='dark'] {
-  --text-color: #fffffe;
+  --content-color: #fffffe;
   --bg-color: #000001;
-  --line-color: #eff;
   --shadow: transparent;
   --card-bg: #222;
   --btn-bg: #222;

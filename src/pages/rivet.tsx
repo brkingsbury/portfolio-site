@@ -16,8 +16,8 @@ export default function Rivet() {
                 <li>HTML | SCSS | Angular / Typescript</li>
                 <li>
                     <img src={github} />&nbsp;
-                    <a href="">Documentation site</a> /&nbsp;
-                    <a href="">NPM style package</a>
+                    <a href="https://github.com/brkingsbury/rivet-documentation" target="_blank">Documentation site</a> /&nbsp;
+                    <a href="https://github.com/brkingsbury/rivet-npm" target="_blank">NPM style package</a>
                 </li>
             </ul>
             <Card img={rivet1} />

@@ -14,7 +14,7 @@ export default function Cultivate() {
                 </li>
                 <li>
                     <img src={github} />&nbsp;
-                    <a href="https://github.com/" target="_blank">Github</a>
+                    <a href="https://github.com/brkingsbury/CYM" target="_blank">Github</a>
                 </li>
             </ul>
             <Card img={cym1} />

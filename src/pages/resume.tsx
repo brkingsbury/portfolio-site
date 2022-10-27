@@ -57,6 +57,7 @@ export default function resume() {
                     <li>Javascript</li>
                     <li>Typescript</li>
                     <li>Angular</li>
+                    <li>Angular JS</li>
                     <li>React</li>
                     <li>WCAG 2.1</li>
                 </ul>

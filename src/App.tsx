@@ -10,15 +10,16 @@ import About from './pages/about';
 import Nav from './components/nav';
 import Header from './components/header';
 import Footer from './components/footer';
-import useLocalStorage from 'use-local-storage';
+// import useLocalStorage from 'use-local-storage';
 import Rivet from './pages/rivet';
 import Cym from './pages/cym';
 import Resume from './pages/resume';
 
 
 function App() {
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  const theme = "light";
+  // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
   // const switchTheme = () => {
   //   const newTheme = theme === 'light' ? 'dark' : 'light';
