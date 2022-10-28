@@ -20,12 +20,12 @@ export default function Rivet() {
                     <a href="https://github.com/brkingsbury/rivet-npm" target="_blank">NPM style package</a>
                 </li>
             </ul>
-            <Card img={rivet1} />
-            <Card img={rivet2} />
-            <Card img={rivet3} />
-            <Card img={rivet4} />
-            <Card img={rivet5} />
-            <Card img={rivet6} />
+            <Card img={rivet1} alt="Landing page for Rivet design system"/>
+            <Card img={rivet2} alt="A documentation page in Rivet"/>
+            <Card img={rivet3} alt="A documentation page in Rivet"/>
+            <Card img={rivet4} alt="A documentation page in Rivet"/>
+            <Card img={rivet5} alt="A documentation page in Rivet"/>
+            <Card img={rivet6} alt="A documentation page in Rivet"/>
         </section>
     )
 }

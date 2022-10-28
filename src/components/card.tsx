@@ -9,7 +9,7 @@ function CardContainer(props: any) {
           {props.header}
         </NavLink>
       </h3>
-      <Card img={props.img} />
+      <Card img={props.img} alt={props.alt} />
       <p className="card-details">
         {props.description}
       </p>
@@ -20,7 +20,7 @@ function CardContainer(props: any) {
 function Card(props: any) {
   return (
     <div className="card">
-      <img src={props.img} />
+      <img src={props.img} alt={props.alt} />
     </div>
   )
 }

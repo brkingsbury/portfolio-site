@@ -8,6 +8,7 @@ export default function Work() {
             <CardContainer
                 header="Rivet"
                 img={rivet}
+                alt="Landing page for Rivet design system"
                 description="A documentation site and component library for an internal design system"
                 link="../rivet"
             />
@@ -15,6 +16,7 @@ export default function Work() {
             <CardContainer
                 header="Cultivate Yoga MKE"
                 img={cym}
+                alt="Landing page for Cultivate Yoga MKE website"
                 description="Website and branding for yoga classes"
                 link="../cym"
             />
