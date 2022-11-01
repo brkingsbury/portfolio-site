@@ -12,7 +12,7 @@
 #wrapper {
     display: grid;
     grid-template-columns: max-content 1fr 10vw;
-    grid-template-rows: max-content 1fr max-content;
+    grid-template-rows: max-content minmax(50vh, 1fr) max-content;
     grid-column-gap:2em;
     grid-row-gap: 2em;
     background-color: var(--bg-color);

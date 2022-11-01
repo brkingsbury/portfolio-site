@@ -70,8 +70,11 @@ export default function resume() {
                 <ul className="skills-list">
                     <li>Sketch</li>
                     <li>Figma</li>
-                    <li>Adobe Creative Suite</li>
+                    <li>XD</li>
                     <li>axe Tools</li>
+                    <li>Illustrator</li>
+                    <li>InDesign</li>
+                    <li>Photoshop</li>
                 </ul>
             </div>
 

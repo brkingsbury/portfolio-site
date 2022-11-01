@@ -15,7 +15,6 @@ nav {
             font-size: 1em;
 
             &:before {
-                content: "";
                 display: block;
                 position: absolute;
                 width: 20px;
@@ -24,6 +23,7 @@ nav {
                 bottom: 1px;
             }
             &.active:before {
+                content: "";
                     background-image: url("../assets/icons/corner-down-right.svg");
             }
         }
@@ -79,7 +79,7 @@ nav {
     padding: 5px;
     border: 2px solid var(--line-color);
     box-shadow: 2px 2px 0 0 var(--shadow);
-    min-height: 150px;
+    min-height: 300px;
 
     img {
         object-fit: cover;
@@ -133,5 +133,21 @@ header {
 }
 
 footer {
-    grid-area: 3 / 1 / 4 / 4;
+    display: flex;
+    grid-area: 3 / 2 / 4 / 3;
+    margin: 60px 0 15px;
+    justify-content: end;
+    border-top: 1px solid var(--line-color);
+    a {
+        height: 40px;
+        &:hover, &:focus {
+            outline: 1px solid var(--line-color);
+        }
+        margin: 5px 0 0 5px;
+    }
+    img {
+        height: 20px;
+        width: 20px;
+        padding: 10px;
+    }
 }
