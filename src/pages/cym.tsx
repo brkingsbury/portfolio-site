@@ -1,4 +1,3 @@
-import './pageStyles.scss';
 import { Card } from '../components/card';
 import cym1 from '../assets/cym.png';
 import github from '../assets/icons/github.svg';
