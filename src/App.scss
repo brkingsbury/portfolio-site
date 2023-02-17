@@ -1,22 +1,21 @@
-
 @mixin button-styles {
     background-color: var(--btn-bg);
     border: 1px solid var(--line-color);
     font-family: var(--font);
     font-size: 1em;
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
         background-color: var(--btn-bg-hover);
     }
 }
 
 #wrapper {
-    display: grid;
     grid-template-columns: max-content 1fr 10vw;
     grid-template-rows: max-content minmax(50vh, 1fr) max-content;
-    grid-column-gap:2em;
+    grid-column-gap: 2em;
     grid-row-gap: 2em;
     background-color: var(--bg-color);
-    padding: 0 0 0 0.75em;
     height: 100%;
     overflow-x: hidden;
 }
@@ -33,32 +32,36 @@ ul {
 }
 
 h2 {
-    margin: 0 0 1em 0;
+    margin: 2em 0;
+    font-weight: 500;
+    text-align: center;
     font-size: 2em;
     text-transform: capitalize;
     line-height: 1;
 }
-nav {
-    grid-area: 2 / 1 / 3 / 2;
-}
-header {
-    grid-area: 1 / 1 / 2 / 2;
-}
 
 main {
-    grid-area: 2 / 2 / 3 / 3;
     max-width: 1000px;
+    margin: 0 auto;
 }
 
 .options {
     grid-area: 2 / 3 / 3 / 4;
     text-align: right;
     position: relative;
+
     button {
         @include button-styles;
         padding: 5px 10px;
         position: absolute;
         right: -1px;
 
+    }
+}
+
+
+@media(max-width: 1060px) {
+    main {
+        margin: 0 30px;
     }
 }

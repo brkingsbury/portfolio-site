@@ -1,0 +1,30 @@
+.status-badge {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px 10px;
+
+    .status-color {
+        display: block;
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        background-color: transparent;
+        line-height: 14px;
+        margin-right: 5px;
+        
+    }
+    .status-color--active {
+        background-color: green;
+    }
+    .status-color--complete {
+        background-color: purple;
+    }
+    .status-color--progress {
+        background-color: gold;
+    }
+    .status-text {
+        font-size: 16px;
+    }
+}

@@ -8,12 +8,11 @@ import {
 } from "react-router-dom";
 import Work from './pages/work';
 import About from './pages/about';
-import Landing from './pages/landing';
 // import useLocalStorage from 'use-local-storage';
 import Rivet from './pages/rivet';
 import Cym from './pages/cym';
+import Retro from './pages/retro';
 import Resume from './pages/resume';
-import Nav from './components/nav';
 import Header from './components/header';
 import Footer from './components/footer';
 
@@ -28,25 +27,31 @@ function App() {
   //   setTheme(newTheme);
   // }
   let location = (useLocation().pathname).substring(1);
-  if (location === 'cym') {
+  if (location === 'work/cym') {
     location = 'Cultivate Yoga MKE'
+  }
+  if (location === 'work/rivet') {
+    location = 'Rivet Design System'
+  }
+  if (location === 'work/retro') {
+    location = 'Retro Site'
   }
 
   return (
     <React.Fragment>
       <div id="wrapper" data-theme={theme}>
         <Header />
-        <Nav />
         <main>
 
           <h2>{location}</h2>
           <Routes>
-            <Route path="" element={<Navigate to="/about"/>}/>
-            <Route path="*" element={<Navigate to="/about"/>}/>
+            <Route path="" element={<Navigate to="/about" />} />
+            <Route path="*" element={<Navigate to="/about" />} />
             <Route path="about" element={<About />} />
             <Route path="work" element={<Work />} />
-            <Route path="rivet" element={<Rivet />} />
-            <Route path="cym" element={<Cym />} />
+            <Route path="work/rivet" element={<Rivet />} />
+            <Route path="work/cym" element={<Cym />} />
+            <Route path="work/retro" element={<Retro />} />
             <Route path="resume" element={<Resume />} />
           </Routes>
         </main>
